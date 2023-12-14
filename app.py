@@ -7,8 +7,8 @@ import requests, os
 
 model = genai.GenerativeModel("gemini-pro")
 SYMBOLS = ["AAPL", "AMZN", "META", "MSFT", "NFLX"]
-fmp_api_key = os.environ["FMP_API_KEY"]
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+fmp_api_key = os.environ["fmp_api_key"]
+genai.configure(api_key=os.environ["gemini_api_key"])
 
 def click_button():
     st.session_state.clicked = True
