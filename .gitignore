@@ -1,0 +1,7 @@
+.git/
+venv/
+__pycache__/
+*.env
+*env*
+env.*
+sandbox.py
