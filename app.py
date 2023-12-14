@@ -68,8 +68,8 @@ if symbol:
                 "Remember to format your response as Markdown and should read as an esay-to-digest financial article. ",
                 content
             ]).text
-        except:
-            response_gemini = "Sorry, there was an error in processing your request. This happens sometimes. Please reset and try again :)"
+        except Exception as e:
+            response_gemini = f"Sorry, there was an error in processing your request. This happens sometimes. Please reset and try again :) \n\n {e}"
         st.markdown(response_gemini.replace("$", "\$"))
         st.button(
             label="Reset",
